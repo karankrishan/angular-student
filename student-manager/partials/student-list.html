@@ -1,0 +1,67 @@
+ <div ng-init="modalShown = false">  
+    <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                    <div class="container">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></a> 
+                            <div class="nav-collapse collapse">
+                                    <ul class="nav">
+                                            <li class="active"><a href=""><i class="icon-white icon-home"></i>&nbsp; Home</a></li>
+                                    </ul>
+                            </div>
+                    </div>
+            </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                    <div class="span12" >
+                            <h1>Salesforce Administration</h1>
+                            <h3 class="heading-margin2">
+                                    Search: <input type="text" ng-model="query" class="input-large"> &nbsp; <a ng-click="openNewStudentForm('sm')" class="btn refresh-btn-margin"><i class="icon-plus-sign"></i>&nbsp;Add Student</a>&nbsp;<a ng-click="reload()" class="btn refresh-btn-margin">Refresh Table</a>
+                            </h3>
+                            <table class="table table-striped table-bordered tableBlue pageme" id="tableSort">
+                                   <thead>
+                                            <tr><!-- REVISIT NG-SHOW and possibly replace with ng:switch -->
+                                            		<th><a href="" ng-click="sortColumn('id')">Id</a><img src="./img/asc.png" ng-show="orderProp == 'id' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'id' && myOrder == true" class="pull-right"/></th>
+                                                    <th><a href="" ng-click="sortColumn('firstName')">First Name</a><img src="./img/asc.png" ng-show="orderProp == 'firstName' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'firstName' && myOrder == true" class="pull-right"/></th>
+                                                    <th><a href="" ng-click="sortColumn('lastName')">Last Name</a><img src="./img/asc.png" ng-show="orderProp == 'lastName' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'lastName' && myOrder == true" class="pull-right"/></th>
+                                                    <th><a href="" ng-click="sortColumn('address')">Address</a><img src="./img/asc.png" ng-show="orderProp == 'address' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'address' && myOrder == true" class="pull-right"/></th>
+                                                    <th><a href="" ng-click="sortColumn('city')">City</a><img src="./img/asc.png" ng-show="orderProp == 'city' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'city' && myOrder == true" class="pull-right"/></th>
+                                                    <th><a href="" ng-click="sortColumn('state')">State</a><img src="./img/asc.png" ng-show="orderProp == 'state' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'state' && myOrder == true" class="pull-right"/></th>
+                                                    <th><a href="" ng-click="sortColumn('zip')">Zipcode</a><img src="./img/asc.png" ng-show="orderProp == 'zip' && myOrder == false" class="pull-right"/><img src="./img/desc.png" ng-show="orderProp == 'zip' && myOrder == true" class="pull-right"/></th>
+                                                    <th style="text-align: center;">Actions</th>
+                                            </tr>
+                                    </thead> 
+                                    <tbody>
+                                            <tr ng-repeat="student in students | filter:query | orderBy:orderProp:myOrder | limitTo:10">
+                                                    <td>{{student.id}}</td>
+                                                    <td>{{student.firstName}}</td>
+                                                    <td>{{student.lastName}}</td>
+                                                    <td>{{student.address}} {{student.address2}}</td>
+                                                    <td>{{student.city}}</td>
+                                                    <td>{{student.state}}</td>
+                                                    <td>{{student.zipCode}}</td>
+                                                    <td style="text-align: center;" >
+                                                        <a class="btn btn-margin" ng-click="openStudentUpdateForm('sm', student)" href=""><i class="icon-user"></i>&nbsp;Update</a> 
+                                                        <a class="btn btn-danger"  ng-click="open('sm', student)"  href=""><i class="icon-white icon-remove"></i>&nbsp;Delete</a>
+                                                    </td>
+                                            </tr>
+                                    </tbody>
+                            </table>
+                    </div>
+            </div>
+
+            <span ng-show="students.length == 0">Loading students...</span> <br/>
+            <span ng-hide="students.length == 0">
+                Showing {{students.length > 10 ? 10 : students.length}} of {{students.length}} students.
+            </span>
+
+            <footer class="footer">
+                    <div class="pull-right">
+                            <p style="margin-bottom: 15px; text-align: right;">
+                                    <a href="javascript:scroll(0,0)">Back to top &uarr;</a>
+                            </p>
+                    </div>
+            </footer>
+             
+    </div>
+</div> 

@@ -1,0 +1,47 @@
+	a.brand			{ color:#FFF; }
+	.standards		{ background:transparent url("../img/footer-w3c.png") 0 0; display:block; height:32px; width:273px; }
+	.credentials            { display:block; float:left; font-size:14px; font-weight:200; line-height:1; padding:5px 20px 5px; }
+	.greeting		{ vertical-align:middle; }
+
+	.navbar div > ul					{ border-left:1px solid #111; border-right:1px solid #333; }
+	.navbar div > ul > li				{ border-left:1px solid #333; border-right:1px solid #111; cursor:pointer; }
+	.navbar div > ul > li:last-child		{ border-right:1px solid #111; }
+
+	.tableBlue			{ background-color:#FFF; margin-top:10px;}
+	.tableBlue th			{ padding-right:0; }
+	.tableBlue th a			{ color:#FFF; }
+	.tableBlue th,
+	 .tableBlue tfoot		{ background-color:#4F4F4F; border-color:#666; color:#FFF; vertical-align:top; }
+	.tableBlue th.header		{ cursor:pointer; } 
+
+	.actionColumn		{ width:225px; }
+
+	.btn				{ margin:3px; }
+        .refresh-btn-margin     { margin:0 3px 9px; }
+
+	.input-special 		{ display:block; margin:5px 0; padding:3px 6px; width:135px; }
+	.input-special2		{ display:block; margin:5px 0; padding:3px 6px; width:200px; }
+
+	.column				{ background-color:#FFF; border:#CCC solid thin; margin-bottom:20px; margin-top:5px; padding:20px; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; }
+
+	.heading-margin1	{ margin-bottom:15px; }
+	.heading-margin2	{ margin:0 5px -10px 0; text-align:right; }
+
+	.well 				{ background-color:#F3F3F3; border:1px solid #CCC; margin-bottom:20px; padding:20px; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset 0 0 10px #CCC; -moz-box-shadow:inset 0 0 10px #CCC; box-shadow:inset 0 0 10px #CCC; }
+
+	ul.simplePagerNav 	{ display: block; list-style-type:none; margin:0 auto; overflow: hidden; padding: 0 5px 5px 0; }
+	ul.simplePagerNav li	{ display:inline; }
+	ul.simplePagerNav a {
+						float: left; color: #666; font-size:14px; line-height:24px; font-weight: normal; text-align: center; border: 1px solid #BBB; min-width: 14px; padding: 0 7px; margin: 5px 5px;
+						border-radius: 3px; box-shadow: 0 1px 2px rgba(0,0,0,0.2); background: #efefef; /* Old browsers */
+						background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top, #ffffff 0%,#efefef 100%); /* Opera11.10+ */
+						background: -ms-linear-gradient(top, #ffffff 0%,#efefef 100%); /* IE10+ */
+						background: linear-gradient(top, #ffffff 0%,#efefef 100%); /* W3C */
+	}
+	ul.simplePagerNav a:hover		{ background: #FCFCFC; text-decoration: none; }
+	ul.simplePagerNav li.currentPage a	{  }
+
+        .ascending      { background:url(../img/asc.png) no-repeat 50% 50%; }
