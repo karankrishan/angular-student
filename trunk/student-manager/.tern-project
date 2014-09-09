@@ -1,0 +1,1 @@
+{"ide":{"scriptPaths":[{"type":"FOLDER","path":"js"},{"type":"FOLDER","path":"lib"},{"type":"FILE","path":"index.html"},{"type":"FOLDER","path":"partials"}]},"plugins":{"angular":{}},"libs":["browser","ecma5","jquery"]}
